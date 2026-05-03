@@ -6,10 +6,10 @@ An automated data profiling and cleaning tool designed to identify business anom
 The goal of this project is to automate the Data Quality (DQ) assessment process. It processes millions of taxi trip records to detect logical inconsistencies—such as negative fares, impossible trip distances, or suspicious tip patterns—and generates a professional report for business stakeholders.
 
 ## 📊 Dataset
-The project uses the official **NYC Taxi Trip Record Data**.
-* **Source:** [NYC TLC Trip Record Data](https://www.nyc.gov/site/tlc/about/tlc-trip-record-data.page)
-* **Format:** CSV (Yellow Taxi Trip Records, January 2021)
-* **Note:** Due to GitHub's file size limits, the raw dataset is not included in this repository.
+The project uses the **NYC Yellow Taxi Trip Records** dataset.
+* **Source:** [DataTalksClub NYC TLC Data (GitHub)](https://github.com/DataTalksClub/nyc-tlc-data/releases/tag/yellow)
+* **Specific File:** `yellow_tripdata_2021-01.csv`
+* **Note:** This specific month was chosen to demonstrate data cleaning techniques on a large-scale real-world dataset. Due to file size limits, the CSV is not included in the repository.
 
 ## 🛠️ Tech Stack
 * **Language:** Python 3.x
