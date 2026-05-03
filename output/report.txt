@@ -1,0 +1,63 @@
+=== DATA QUALITY & ANALYSIS REPORT ===
+Total rows analyzed: 1369765
+Execution time: 2.33 seconds
+
+Basic Data Quality:
+  Missing tolls_amount: 0
+  Missing tip_amount: 0
+  Missing passenger_count: 98352
+  Missing fare_amount: 0
+  Invalid tolls_amount: 0
+  Invalid tip_amount: 0
+  Invalid passenger_count: 0
+  Invalid fare_amount: 0
+  Negative tolls_amount: 139
+  Negative tip_amount: 59
+  Negative fare_amount: 6769
+  Invalid passenger count: 26733
+  Duplicates: 0
+
+Advanced Analysis:
+  Trips under 1 minute: 20376
+  Zero distance but paid rides: 18968
+  Tip greater than fare: 9597
+  No tip on expensive rides (>30$): 40168
+
+Passenger distribution:
+  1.0: 966233
+  2.0: 161670
+  3.0: 43935
+  5.0: 31089
+  0.0: 26726
+  6.0: 25362
+  4.0: 16391
+  7.0: 5
+  8.0: 2
+
+Fare statistics:
+  count: 1369765.0
+  mean: 12.1
+  std: 12.91
+  min: -490.0
+  25%: 6.0
+  50%: 8.5
+  75%: 13.5
+  max: 6960.5
+
+Tip statistics:
+  count: 1369765.0
+  mean: 1.92
+  std: 2.6
+  min: -100.0
+  25%: 0.0
+  50%: 1.86
+  75%: 2.75
+  max: 1140.44
+
+=========================================
+💡 BUSINESS INSIGHTS & ACTIONS
+=========================================
+- DATA QUALITY: The raw dataset contains significant anomalies. Negative fares and 0-distance paid rides highly indicate system errors, refunds, or test logs that need filtering.
+- USER BEHAVIOR: A massive volume of expensive rides (>$30) resulted in $0 tip. This strongly suggests cash tipping is not being logged by the system, rather than actual lack of tips.
+- DEMOGRAPHICS: The vast majority of trips are single-passenger rides. From a fleet optimization perspective, standard sedans are highly preferable and more cost-effective than large SUVs or vans.
+- ML READINESS: The dataset is currently NOT ready for Machine Learning. It requires a mandatory cleaning pipeline (removing negative values, unparseable strings, and extreme outliers) before any predictive modeling.
